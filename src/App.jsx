@@ -187,7 +187,9 @@ function Vendedores({ sectionRef }) {
       })
       .then((json) => {
         if (!alive) return;
-        const arr = Array.isArray(json) ? json : json?.data || [];
+        const arr = Array.isArray(json)
+          ? json
+          : json?.vendedores || json?.data || [];
         const grouped = {};
         for (const row of arr) {
           const uni = (row.universidad || '').trim();

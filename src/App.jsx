@@ -65,16 +65,16 @@ function InstagramIcon() {
 
 function PuntoCard({ nombre, url }) {
   return (
-    <div className="glass rounded-2xl p-4 flex items-center justify-between gap-3">
-      <div className="flex items-center gap-3 min-w-0">
-        <div className="text-amber-300 shrink-0"><PinIcon /></div>
-        <span className="font-semibold text-white text-[17px] truncate">{nombre}</span>
+    <div className="glass rounded-xl px-3 py-2 flex items-center justify-between gap-2">
+      <div className="flex items-center gap-2 min-w-0">
+        <div className="text-amber-300 shrink-0 scale-75"><PinIcon /></div>
+        <span className="font-semibold text-white text-[13px] truncate leading-tight">{nombre}</span>
       </div>
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="shrink-0 h-12 px-4 inline-flex items-center justify-center rounded-xl font-semibold text-[15px] bg-gradient-to-br from-amber-300 to-amber-600 text-black active:scale-95 transition-transform shadow-lg shadow-amber-900/40"
+        className="shrink-0 h-8 px-3 inline-flex items-center justify-center rounded-lg font-semibold text-[12px] bg-gradient-to-br from-amber-300 to-amber-600 text-black active:scale-95 transition-transform shadow-md shadow-amber-900/40"
       >
         Cómo ir
       </a>
@@ -89,9 +89,9 @@ function PuntosVenta() {
       <p className="text-center text-white/70 text-sm mb-5">Compra tu boleto en efectivo</p>
 
       {Object.entries(PUNTOS_VENTA).map(([grupo, lista]) => (
-        <div key={grupo} className="mb-6">
-          <h3 className="text-lg font-bold mb-3 text-white/90 px-1">{grupo}</h3>
-          <div className="flex flex-col gap-3">
+        <div key={grupo} className="mb-4">
+          <h3 className="text-sm font-bold mb-2 text-white/90 px-1">{grupo}</h3>
+          <div className="flex flex-col gap-1.5">
             {lista.map((p) => (
               <PuntoCard key={p.nombre} {...p} />
             ))}
@@ -289,14 +289,14 @@ function RpesModal({ onClose }) {
           Mesas, cover, guestlist y más. Escríbenos directo y te ayudamos.
         </p>
         <a
-          href="https://instagram.com/rpes.mx"
+          href="https://www.instagram.com/rpees.mx"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full h-14 inline-flex items-center justify-center gap-2 rounded-2xl font-bold text-[16px] text-white active:scale-[0.98] transition-transform shadow-xl"
           style={{ background: 'linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)' }}
         >
           <InstagramIcon />
-          Escríbenos en Instagram @rpes.mx
+          Escríbenos en Instagram @rpees.mx
         </a>
       </div>
     </div>
